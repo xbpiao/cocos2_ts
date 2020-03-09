@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "1.4.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Creator Debug: Launch Chrome",
+            "url": "http://localhost:7456/",
+            "webRoot": "${workspaceFolder}/temp/quick-scripts/assets/Script",
+            "sourceMaps": true,
+            "trace": "verbose",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222",
+                "--auto-open-devtools-for-tabs"
+            ],
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "pathMapping": {
+                "/preview-scripts/assets": "${workspaceRoot}/temp/quick-scripts/assets",
+                "/": "${workspaceRoot}"
+            },        
+            "disableNetworkCache": true,
+            "showAsyncStacks": true,
+            "preLaunchTask": "mycompile"
+        }
+    ]
+}
